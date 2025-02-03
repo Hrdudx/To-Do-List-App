@@ -21,6 +21,7 @@ Este projeto consiste em uma API RESTful que permite criar, listar, atualizar e 
 * H2 Database (para desenvolvimento)
 * Springdoc OpenAPI (Swagger)
 * Maven
+* Lombok
 
 ## Arquitetura
 
@@ -31,9 +32,28 @@ O projeto segue uma arquitetura MVC (Model-View-Controller), com as seguintes ca
 * Repository: Interface que define as operações de acesso ao banco de dados, utilizando o Spring Data JPA.
 * Model: Classes que representam as entidades do domínio (Tarefa).
 
+## Estrutura do Projeto
+
+* **src/main/java/br/com/seuprojeto/todolist/**
+    * **controller/**: Contém as classes controladoras que expõem os endpoints da API REST.
+        * **TarefaController.java**: Responsável por receber as requisições HTTP e interagir com a camada de serviço para realizar as operações CRUD de tarefas.
+    * **model/**: Contém as classes de modelo que representam as entidades do domínio.
+        * **Tarefa.java**: Classe que representa a entidade "tarefa", com atributos como id, título, descrição, concluída e data de criação.
+    * **repository/**: Contém as interfaces de repositório que definem as operações de acesso ao banco de dados.
+        * **TarefaRepository.java**: Interface que define as operações CRUD para a entidade "tarefa", utilizando o Spring Data JPA.
+    * **service/**: Contém as classes de serviço que implementam a lógica de negócios da aplicação.
+        * **TarefaService.java**: Classe que contém a lógica de negócios para as operações de tarefas, como criar, listar, atualizar e excluir.
+    * **config/**: Contém as classes de configuração da aplicação.
+        * **SpringFoxConfig.java**: Classe que configura o Swagger para gerar a documentação da API.
+    * **TodolistApplication.java**: Classe principal da aplicação Spring Boot, responsável por iniciar a aplicação.
+* **src/main/resources/**
+    * **application.properties**: Arquivo de configuração da aplicação, contendo propriedades como configurações do banco de dados, servidor e Swagger.
+* **pom.xml**: Arquivo de configuração do Maven, contendo as dependências do projeto e outras configurações de build.
+* **README.md**: Arquivo que contém a documentação do projeto, incluindo informações sobre como executar, contribuir e a descrição dos arquivos.
+
 ## Como executar
 
-1. Clone o repositório: `git clone https://github.com/Hrdudx/to-do-list.git`
+1. Clone o repositório: `git clone https://github.com/seu-usuario/to-do-list.git`
 2. Acesse a pasta do projeto: `cd to-do-list`
 3. Execute o comando Maven: `mvn spring-boot:run`
 4. A API estará disponível em: `http://localhost:8080`
