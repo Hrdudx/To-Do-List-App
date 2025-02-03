@@ -1,6 +1,6 @@
 # To-Do List API
 
-Uma API RESTful para gerenciamento de listas de tarefas (to-do lists), construída com JAV, Spring Boot e documentada com Swagger.
+Uma API RESTful para gerenciamento de listas de tarefas (to-do lists), construída com JAVA, Spring Boot e documentada com Swagger.
 
 ## Descrição
 
