@@ -72,4 +72,4 @@ O projeto segue uma arquitetura MVC (Model-View-Controller), com as seguintes ca
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
-Copyright (c) [2025] [HAYYRA EDUARDA ROCHA]
+Copyright (c) 2025 Hayyra Eduarda Rocha
